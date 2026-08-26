@@ -1,8 +1,8 @@
 .Skills {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 150px 180px;
+  height: auto;
+  padding: 60px 180px;
   gap: 50px;
 }
 
@@ -10,58 +10,13 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-  height: 40%;
   gap: 30px;
 }
 
-/* .s-right {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  height: 40%;
-  gap: 30px;
-}
-
-.card{
-  text-align: center;
-  width: 213px;
-  box-shadow: 0 0px 3px;
-}
-
-img{
-  width: 100px;
-  height: 100px;
-}
-
-.card_Header1 {
-  background-color: #e34f26;
-}
-.card_Header2 {
-  background-color: #29a9df;
-}
-.card_Header3{
-  background-color: #f7df1e;
-}
-.card_Header4 {
-  background-color: #ecf0f3;
-}
-.card_Header5 {
-  background-color: #ecf0f3;
-}
-.card_Header6 {
-  background-color: #e34f26;
-}
-.card_Header7 {
-  background-color: #e34f26;
-}
-.card_Header8 {
-  background-color: #e34f26;
-} */
 .T-skills {
   position: relative;
-  max-width: 500px;
   width: 100%;
-  margin: 0 15px;
+  max-width: 600px;
   padding: 30px 20px;
   border-radius: 7px;
 }
@@ -70,74 +25,45 @@ img{
   width: 100%;
   margin: 25px 0;
 }
+
 .s-box .s-title {
   display: block;
   font-size: 14px;
   font-weight: 600;
+  margin-bottom: 8px;
 }
+
 .s-box .s-bar {
   height: 8px;
-  width: 177%;
+  width: 100%;
   border-radius: 10px;
-  margin-top: 10px;
   background: #00000066;
 }
+
+/* Base fill - default */
 .s-box .skill-per {
   position: relative;
   display: block;
   height: 100%;
-  width: 70%;
   border-radius: 6px;
   background: #d83536;
   animation: loading 0.4s ease-in-out forwards;
   opacity: 0;
 }
-.s-box .skill-per.css {
-  width: 60%;
-  animation-delay: 0.1s;
-}
-.s-box .skill-per.js {
-  width: 30%;
-  animation-delay: 0.2s;
-}
-.s-box .skill-per.react {
-  width: 40%;
-  animation-delay: 0.3s;
-}
-.s-box .skill-per.sql {
-  width: 50%;
-  animation-delay: 0.4s;
-}
-.s-box .skill-per.figma {
-  width: 70%;
-  animation-delay: 0.4s;
-}
-.s-box .skill-per.xd {
-  width: 40%;
-  animation-delay: 0.4s;
-}
-.s-box .skill-per.indesign {
-  width: 30%;
-  animation-delay: 0.4s;
-}
-.s-box .skill-per.ps {
-  width: 30%;
-  animation-delay: 0.4s;
-}
-.s-box .skill-per.flutter {
-  width: 70%;
-  animation-delay: 0.4s;
-}
+
+/* Per-skill widths — must match the s-per text in Skills.jsx */
+.s-box .skill-per.csharp  { width: 70%; animation-delay: 0.05s; }
+.s-box .skill-per.python  { width: 50%; animation-delay: 0.10s; }
+.s-box .skill-per.react   { width: 65%; animation-delay: 0.15s; }
+.s-box .skill-per.js      { width: 65%; animation-delay: 0.20s; }
+.s-box .skill-per.html    { width: 80%; animation-delay: 0.25s; }
+.s-box .skill-per.css     { width: 75%; animation-delay: 0.30s; }
+.s-box .skill-per.sql     { width: 65%; animation-delay: 0.35s; }
+.s-box .skill-per.azure   { width: 40%; animation-delay: 0.40s; }
 
 @keyframes loading {
-  0% {
-    width: 0;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0%   { width: 0; opacity: 1; }
+  100% { opacity: 1; }
 }
 
 .skill-per .s-per {
@@ -150,4 +76,38 @@ img{
   border-radius: 3px;
   background: #d83536;
   color: white;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Skills {
+    padding: 60px 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Skills {
+    padding: 60px 30px;
+  }
+  .s-left {
+    flex-direction: column;
+  }
+  .T-skills {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  .T-skills .s-box {
+    margin: 16px 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Skills {
+    padding: 40px 16px;
+  }
+  .s-box .s-title {
+    font-size: 13px;
+  }
 }

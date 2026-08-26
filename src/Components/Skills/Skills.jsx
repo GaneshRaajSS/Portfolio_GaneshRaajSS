@@ -1,98 +1,36 @@
 import React from 'react'
 import './Skills.css'
 
+const skills = [
+  { label: 'C# / .NET',        className: 'csharp', percent: '70%' },
+  { label: 'Python',            className: 'python', percent: '50%' },
+  { label: 'React.js',          className: 'react',  percent: '65%' },
+  { label: 'JavaScript',        className: 'js',     percent: '65%' },
+  { label: 'HTML',              className: 'html',   percent: '80%' },
+  { label: 'CSS',               className: 'css',    percent: '75%' },
+  { label: 'SQL Server',        className: 'sql',    percent: '65%' },
+  { label: 'Microsoft Azure',   className: 'azure',  percent: '40%' },
+]
+
 const Skills = () => {
   return (
     <div className="Skills">
-    <div className="s-left">
+      <div className="s-left">
         <div className="T-skills">
-            <div className="s-box">
-                <span className="s-title">HTML</span>
-                <div className="s-bar">
-                    <span className="skill-per html">
-                        <span className="s-per">70%</span>
-                    </span>
-                </div>
+          {skills.map((skill) => (
+            <div className="s-box" key={skill.className}>
+              <span className="s-title">{skill.label}</span>
+              <div className="s-bar">
+                <span className={`skill-per ${skill.className}`}>
+                  <span className="s-per">{skill.percent}</span>
+                </span>
+              </div>
             </div>
-            <div className="s-box">
-                <span className="s-title">CSS</span>
-                <div className="s-bar">
-                    <span className="skill-per css">
-                        <span className="s-per">60%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">JS</span>
-                <div className="s-bar">
-                    <span className="skill-per js">
-                        <span className="s-per">30%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">React</span>
-                <div className="s-bar">
-                    <span className="skill-per react">
-                        <span className="s-per">40%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">Figma</span>
-                <div className="s-bar">
-                    <span className="skill-per figma">
-                        <span className="s-per">70%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">Adobe Indesign</span>
-                <div className="s-bar">
-                    <span className="skill-per indesign">
-                        <span className="s-per">30%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">Adobe Photoshop</span>
-                <div className="s-bar">
-                    <span className="skill-per ps">
-                        <span className="s-per">30%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">Adobe XD</span>
-                <div className="s-bar">
-                    <span className="skill-per xd">
-                        <span className="s-per">40%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">Flutter</span>
-                <div className="s-bar">
-                    <span className="skill-per flutter">
-                        <span className="s-per">70%</span>
-                    </span>
-                </div>
-            </div>
-            <div className="s-box">
-                <span className="s-title">MySQL</span>
-                <div className="s-bar">
-                    <span className="skill-per sql">
-                        <span className="s-per">50%</span>
-                    </span>
-                </div>
-            </div>
+          ))}
         </div>
+      </div>
     </div>
-</div>
   )
 }
 
 export default Skills
-
-
-

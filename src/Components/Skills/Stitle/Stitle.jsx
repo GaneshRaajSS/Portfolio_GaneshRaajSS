@@ -4,13 +4,12 @@ import './Stitle.css'
 const Stitle = () => {
   return (
     <div className="Stitle">
-        <div className="BG-text">
-            <span className="abtme">ABOUT ME</span>
-        </div>
-        
-        <div className="S-title">
-            <span className="sme">SKILLS</span>
-        </div>
+      <div className="BG-text">
+        <span>ABOUT ME</span>
+      </div>
+      <div className="S-title">
+        <span>SKILLS</span>
+      </div>
     </div>
   )
 }
