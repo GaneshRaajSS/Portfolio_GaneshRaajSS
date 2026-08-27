@@ -23,7 +23,7 @@
     font-size: 2.5rem;
 }
 .left-nav-name:hover{
-    cursor: pointer;
+    cursor: default;
 }
 a{
     all: unset;
