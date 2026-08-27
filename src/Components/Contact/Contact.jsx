@@ -144,13 +144,12 @@ const Contact = () => {
             </p>
             <div className="contact-links">
               {contactLinks.map((item) => (
-                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   key={item.label}
                   href={item.href}
                   className="contact-link-item"
                   target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   onClick={item.copyable ? (e) => handleCopy(e, item.value) : undefined}
                 >
                   <span className="contact-link-icon">{item.icon}</span>
