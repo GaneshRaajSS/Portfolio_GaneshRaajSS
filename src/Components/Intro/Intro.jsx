@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Intro.css'
+import Certifications from '../Certifications/Certifications'
 
 const Intro = () => {
+  const [showCerts, setShowCerts] = useState(false)
+
   return (
     <div className="intro">
+      {showCerts && <Certifications onClose={() => setShowCerts(false)} />}
       <div className="intro-left">
         <div className="i-l-text">
           <span className="i-hello">Hello!</span>
@@ -18,9 +22,9 @@ const Intro = () => {
           <a href="mailto:ssganeshraaj@gmail.com">
             <button className="button-i-btntalk">Lets Connect!</button>
           </a>
-          <a href="https://github.com/ganeshraaj" target="_blank" rel="noreferrer">
-            <button className="button-i-btnproject">Projects</button>
-          </a>
+          <button className="button-i-btnproject" onClick={() => setShowCerts(true)}>
+            Certifications
+          </button>
         </div>
       </div>
 
@@ -56,3 +60,4 @@ const Intro = () => {
 }
 
 export default Intro
+

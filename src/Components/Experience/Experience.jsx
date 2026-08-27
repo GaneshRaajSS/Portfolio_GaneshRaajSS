@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Experience.css'
 
 const experiences = [
@@ -23,43 +23,71 @@ const experiences = [
   },
 ]
 
-const Experience = () => {
+const PREVIEW_COUNT = 3
+
+const ExperienceCard = ({ exp }) => {
+  const [expanded, setExpanded] = useState(false)
+  const visible = expanded ? exp.responsibilities : exp.responsibilities.slice(0, PREVIEW_COUNT)
+
   return (
-    <div className="Experience">
-      <div className="timeline">
-        {experiences.map((exp) => (
-          <div className="timeline-item" key={exp.id}>
-            <div className="timeline-marker" />
-            <div className="timeline-card">
-              <div className="exp-header">
-                <div className="exp-header-left">
-                  <h3 className="exp-role">{exp.role}</h3>
-                  <span className="exp-company">{exp.company}</span>
-                  {exp.client && (
-                    <span className="exp-client">Client: {exp.client}</span>
-                  )}
-                </div>
-                <div className="exp-header-right">
-                  <span className="exp-duration">{exp.duration}</span>
-                  <span className="exp-location">{exp.location}</span>
-                </div>
-              </div>
-              <div className="exp-tools">
-                {exp.tools.map((tool) => (
-                  <span key={tool}>{tool}</span>
-                ))}
-              </div>
-              <ul className="exp-responsibilities">
-                {exp.responsibilities.map((r, i) => (
-                  <li key={i}>{r}</li>
-                ))}
-              </ul>
-            </div>
+    <div className="timeline-item" key={exp.id}>
+      <div className="timeline-marker" />
+      <div className="timeline-card">
+        <div className="exp-header">
+          <div className="exp-header-left">
+            <h3 className="exp-role">{exp.role}</h3>
+            <span className="exp-company">{exp.company}</span>
+            {exp.client && (
+              <span className="exp-client">Client: {exp.client}</span>
+            )}
           </div>
-        ))}
+          <div className="exp-header-right">
+            <span className="exp-duration">{exp.duration}</span>
+            <span className="exp-location">{exp.location}</span>
+          </div>
+        </div>
+        <div className="exp-tools">
+          {exp.tools.map((tool) => (
+            <span key={tool}>{tool}</span>
+          ))}
+        </div>
+        <ul className="exp-responsibilities">
+          {visible.map((r, i) => (
+            <li key={i}>{r}</li>
+          ))}
+        </ul>
+        {exp.responsibilities.length > PREVIEW_COUNT && (
+          <button
+            className="exp-toggle"
+            onClick={() => setExpanded(e => !e)}
+          >
+            {expanded
+              ? '▲ Show less'
+              : `▼ Show ${exp.responsibilities.length - PREVIEW_COUNT} more`}
+          </button>
+        )}
       </div>
     </div>
   )
 }
 
+const Experience = () => {
+  return (
+    <>
+    <div className="Etitle">
+      <div className="BG-text-e"><span>EXPERIENCE</span></div>
+      <div className="E-title"><span>WORK HISTORY</span></div>
+    </div>
+    <div className="Experience">
+      <div className="timeline">
+        {experiences.map((exp) => (
+          <ExperienceCard key={exp.id} exp={exp} />
+        ))}
+      </div>
+    </div>
+    </>
+  )
+}
+
 export default Experience
+

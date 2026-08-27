@@ -32,6 +32,11 @@ const Projects = () => {
   const [activeProject, setActiveProject] = useState(null)
 
   return (
+    <>
+    <div className="Ptitle">
+      <div className="BG-text-p"><span>PROJECTS</span></div>
+      <div className="P-title"><span>RECENT WORKS</span></div>
+    </div>
     <div className="Projects">
       <div className="project-cards">
         {projects.map((project) => (
@@ -63,7 +68,9 @@ const Projects = () => {
         />
       )}
     </div>
+    </>
   )
 }
 
 export default Projects
+
