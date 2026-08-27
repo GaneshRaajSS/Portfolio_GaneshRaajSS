@@ -23,7 +23,7 @@ const projects = [
       'GPT-4o-mini generated human-readable explanations alongside scores',
       'Full observability stack with distributed tracing via OpenTelemetry',
     ],
-    github: '#',
+    github: 'https://github.com/GaneshRaajSS/Designathon_ResumeRanker',
     live: null,
   },
 ]

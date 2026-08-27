@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Intro from './Components/Intro/Intro'
@@ -8,6 +8,10 @@ import Projects from './Components/Projects/Projects'
 import Contact from './Components/Contact/Contact'
 
 const App = () => {
+  useEffect(() => {
+    window.history.replaceState(null, '', window.location.pathname)
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="App">

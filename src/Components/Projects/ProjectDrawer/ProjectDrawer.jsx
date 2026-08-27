@@ -56,7 +56,7 @@ const ProjectDrawer = ({ project, onClose }) => {
 
           <div className="drawer-links">
             {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer" className="drawer-btn drawer-btn-outline">
+              <a href={project.github} target="https://github.com/GaneshRaajSS" rel="noreferrer" className="drawer-btn drawer-btn-outline">
                 GitHub
               </a>
             )}
