@@ -144,6 +144,7 @@ const Contact = () => {
             </p>
             <div className="contact-links">
               {contactLinks.map((item) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   key={item.label}
                   href={item.href}
@@ -177,4 +178,3 @@ const Contact = () => {
 }
 
 export default Contact
-
