@@ -149,7 +149,7 @@ const Contact = () => {
                   href={item.href}
                   className="contact-link-item"
                   target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  rel="noopener noreferrer"
                   onClick={item.copyable ? (e) => handleCopy(e, item.value) : undefined}
                 >
                   <span className="contact-link-icon">{item.icon}</span>
