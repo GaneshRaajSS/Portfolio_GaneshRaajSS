@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="n-wrapper">
       <div className="left-nav">
-        <a href="#about" className="left-nav-name">
+        <a href="" className="left-nav-name">
           Portfo<span>lio.</span>
         </a>
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
