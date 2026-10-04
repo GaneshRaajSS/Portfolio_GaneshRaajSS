@@ -7,7 +7,6 @@ const certifications = [
     title: 'Microsoft Azure Fundamentals [AZ-900]',
     issuer: 'Microsoft',
     date: 'Nov 2024',
-    credentialId: '5718572C159484BF',
     viewUrl: '#',
   },
   {
@@ -23,7 +22,6 @@ const certifications = [
     title: 'Microsoft Full Stack Engineer - Associate',
     issuer: 'Hexaware',
     date: 'Apr 2025',
-    credentialId: 'TSR Bronze Certification',
     viewUrl: '#',
   },
   {
@@ -31,7 +29,6 @@ const certifications = [
     title: 'Scrum Fundamentals',
     issuer: 'Scrum Study',
     date: 'Oct 2025',
-    credentialId: '1120266',
     viewUrl: '#',
   },
 ]
@@ -53,7 +50,6 @@ const Certifications = ({ onClose }) => {
               <div className="cert-card-body">
                 <span className="cert-title">{cert.title}</span>
                 <span className="cert-issuer">{cert.issuer} &nbsp;·&nbsp; {cert.date}</span>
-                <span className="cert-id">Credential ID: {cert.credentialId}</span>
               </div>
               <a
                 href={cert.viewUrl}

@@ -16,8 +16,13 @@ const Navbar = () => {
         <div className="left-nav-name">
           Portfo<span>lio.</span>
         </div>
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a href="#" className="resume-link">Resume</a>
+        <a
+          href="/Ganesh%20Raaj%20Resume%202%2B.pdf"
+          className="resume-link"
+          download
+        >
+          Resume
+        </a>
       </div>
       <div className="right-nav">
         <ul>
