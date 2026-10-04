@@ -18,23 +18,14 @@ const Navbar = () => {
         <div className="left-nav-name">
           Portfo<span>lio.</span>
         </div>
-        <div className="resume-actions">
-          <a
-            href={resumeUrl}
-            className="resume-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Resume
-          </a>
-          <a
-            href={resumeUrl}
-            className="resume-link resume-download"
-            download="Ganesh-Raaj-Resume.pdf"
-          >
-            Download
-          </a>
-        </div>
+        <a
+          href={resumeUrl}
+          className="resume-link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Resume
+        </a>
       </div>
       <div className="right-nav">
         <ul>

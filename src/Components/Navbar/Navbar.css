@@ -14,11 +14,6 @@
     align-items: center;
     gap: 50px;
 }
-.resume-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 .left-nav-name span {
     color: #d83536;
 }
