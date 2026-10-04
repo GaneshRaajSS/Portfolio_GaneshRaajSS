@@ -24,7 +24,7 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          View Resume
+          Resume
         </a>
       </div>
       <div className="right-nav">

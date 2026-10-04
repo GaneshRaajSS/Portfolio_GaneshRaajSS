@@ -1,13 +1,16 @@
 import React from 'react'
 import './Certifications.css'
 
+const azureCertificateUrl = `${process.env.PUBLIC_URL}/Certs/Microsoft-Azure-Fundamentals.pdf`
+const scrumCertificateUrl = `${process.env.PUBLIC_URL}/Certs/ScrumFundamentalsCertified.pdf`
+
 const certifications = [
   {
     id: 1,
     title: 'Microsoft Azure Fundamentals [AZ-900]',
     issuer: 'Microsoft',
     date: 'Nov 2024',
-    viewUrl: '#',
+    viewUrl: azureCertificateUrl,
   },
   {
     id: 2,
@@ -29,7 +32,7 @@ const certifications = [
     title: 'Scrum Fundamentals',
     issuer: 'Scrum Study',
     date: 'Oct 2025',
-    viewUrl: '#',
+    viewUrl: scrumCertificateUrl,
   },
 ]
 
@@ -68,4 +71,3 @@ const Certifications = ({ onClose }) => {
 }
 
 export default Certifications
-
