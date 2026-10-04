@@ -1,6 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 
+const resumeUrl = `${process.env.PUBLIC_URL}/Ganesh%20Raaj%20Resume%202%2B.pdf`
+
 const navLinks = [
   { label: 'About',      href: '#about' },
   { label: 'Skills',     href: '#skills' },
@@ -16,13 +18,23 @@ const Navbar = () => {
         <div className="left-nav-name">
           Portfo<span>lio.</span>
         </div>
-        <a
-          href="/Ganesh%20Raaj%20Resume%202%2B.pdf"
-          className="resume-link"
-          download
-        >
-          Resume
-        </a>
+        <div className="resume-actions">
+          <a
+            href={resumeUrl}
+            className="resume-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Resume
+          </a>
+          <a
+            href={resumeUrl}
+            className="resume-link resume-download"
+            download="Ganesh-Raaj-Resume.pdf"
+          >
+            Download
+          </a>
+        </div>
       </div>
       <div className="right-nav">
         <ul>

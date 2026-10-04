@@ -14,6 +14,11 @@
     align-items: center;
     gap: 50px;
 }
+.resume-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .left-nav-name span {
     color: #d83536;
 }
@@ -54,6 +59,10 @@ a{
 }
 
 .resume-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     font-size: 14px;
     font-weight: 600;
     border: 2px solid #d83536;
@@ -68,6 +77,10 @@ a{
     color: white;
     cursor: pointer;
 }
+.resume-link:focus-visible {
+    outline: 2px solid #d83536;
+    outline-offset: 3px;
+}
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -79,6 +92,8 @@ a{
     }
     .left-nav {
         justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
     }
     .left-nav-name {
         font-size: 1.8rem;
@@ -98,6 +113,9 @@ a{
     }
     .left-nav-name {
         font-size: 1.5rem;
+    }
+    .resume-link {
+        padding: 8px 12px;
     }
     .right-nav ul {
         gap: 16px;
