@@ -2,6 +2,8 @@ import React from 'react'
 import './Certifications.css'
 
 const azureCertificateUrl = `${process.env.PUBLIC_URL}/Certs/Microsoft-Azure-Fundamentals.pdf`
+const postmanCertificateUrl = `${process.env.PUBLIC_URL}/Certs/Postman Certificate.pdf`
+const fullStackCertificateUrl = `${process.env.PUBLIC_URL}/Certs/FS Associate.pdf`
 const scrumCertificateUrl = `${process.env.PUBLIC_URL}/Certs/ScrumFundamentalsCertified.pdf`
 
 const certifications = [
@@ -17,15 +19,14 @@ const certifications = [
     title: 'Postman API - Fundamentals',
     issuer: 'Postman',
     date: 'Apr 2025',
-    // credentialId: 'UC-XXXX-XXXX',
-    viewUrl: '#',
+    viewUrl: postmanCertificateUrl,
   },
   {
     id: 3,
     title: 'Microsoft Full Stack Engineer - Associate',
     issuer: 'Hexaware',
     date: 'Apr 2025',
-    viewUrl: '#',
+    viewUrl: fullStackCertificateUrl,
   },
   {
     id: 4,
