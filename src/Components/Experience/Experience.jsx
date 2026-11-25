@@ -6,7 +6,7 @@ const experiences = [
     id: 1,
     company: 'Hexaware Technologies Ltd',
     client: 'EY (Ernst & Young)',
-    role: 'Associate Software Developer',
+    role: 'Software Engineer Level 1',
     duration: 'Oct 2024 - Present',
     location: 'Chennai, Tamil Nadu, India',
     tools: ['C#', '.NET', 'React.js', 'Python', 'SQL Server', 'Azure'],
