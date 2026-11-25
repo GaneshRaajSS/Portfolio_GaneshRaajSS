@@ -26,6 +26,28 @@ const projects = [
     github: 'https://github.com/GaneshRaajSS/Designathon_ResumeRanker',
     live: null,
   },
+  {
+    id: 2,
+    title: 'DeskMate: Nova the Dragon',
+    duration: 'Sept 2026 - Nov 2026',
+    description:
+      'A Python-based desktop productivity and learning companion featuring animated states, interview preparation, and gamified DSA training.',
+    tags: ['Python', 'tkinter', 'PIL/Pillow', 'Factory Droid SDK', 'JSON', 'pystray', 'keyboard'],
+    responsibilities: [
+      'Conceptualized and defined requirements for a Python-based desktop productivity and learning application.',
+      'Used Claude through Factory Droid for AI-assisted implementation of an animated desktop companion, interview preparation module, and DSA trainer.',
+      'Guided the development of features including 15+ animation states, repository-aware interview questions, and gamified learning progression.',
+      'Performed functional testing, identified defects, and resolved issues through AI-assisted troubleshooting and minor code modifications.',
+      'Delivered the initial application within one week, followed by one week of testing and bug fixes.',
+    ],
+    highlights: [
+      'Built 15+ animated desktop companion states',
+      'Added repository-aware interview questions and a gamified DSA trainer',
+      'Completed the initial application and bug-fix cycle in two weeks',
+    ],
+    github: null,
+    live: null,
+  },
 ]
 
 const Projects = () => {
