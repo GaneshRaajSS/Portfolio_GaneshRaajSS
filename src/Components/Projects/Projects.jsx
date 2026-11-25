@@ -5,6 +5,7 @@ import ProjectDrawer from './ProjectDrawer/ProjectDrawer'
 const projects = [
   {
     id: 1,
+    category: 'AI • FULL-STACK',
     title: 'Document Similarity Comparison & Ranking System',
     duration: 'May 2025 - June 2025',
     description:
@@ -28,6 +29,7 @@ const projects = [
   },
   {
     id: 2,
+    category: 'DESKTOP • PRODUCTIVITY • EXPERIMENTAL',
     title: 'DeskMate: Nova the Dragon',
     duration: 'Sept 2026 - Nov 2026',
     description:
@@ -62,24 +64,40 @@ const Projects = () => {
     <div className="Projects">
       <div className="project-cards">
         {projects.map((project) => (
-          <div
-            className="project-card"
+          <article
+            className={`project-card project-card--${project.id}`}
             key={project.id}
             onClick={() => setActiveProject(project)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setActiveProject(project)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setActiveProject(project)
+              }
+            }}
           >
-            <h3>{project.title}</h3>
-            <p className="project-duration">{project.duration}</p>
-            <p className="project-desc">{project.description}</p>
-            <div className="project-tags">
-              {project.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
+            <div className="project-card-topline">
+              <span className="project-number">0{project.id}</span>
+              <span className="project-category">{project.category}</span>
             </div>
-            <span className="project-cta">View Details &rarr;</span>
-          </div>
+            <div className="project-card-content">
+              <p className="project-duration">{project.duration}</p>
+              <h3>{project.title}</h3>
+              <p className="project-desc">{project.description}</p>
+              <div className="project-tags">
+                {project.tags.slice(0, 4).map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+                {project.tags.length > 4 && (
+                  <span className="project-tag-more">+{project.tags.length - 4}</span>
+                )}
+              </div>
+              <span className="project-cta">
+                Explore project <span aria-hidden="true">↗</span>
+              </span>
+            </div>
+          </article>
         ))}
       </div>
 
